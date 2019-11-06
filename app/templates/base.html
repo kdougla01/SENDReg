@@ -4,7 +4,7 @@
         {% if title %}
         <title>{{ title }}</title>
         {% else %}
-        <title>MyBlog</title>
+        <title>SENDReg</title>
         {% endif %}
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,6 +39,8 @@
                     <ul class="nav navbar-nav navbar-right">
                         {% if current_user.is_authenticated %}
                             <li><a href="{{ url_for('logout') }}">Logout</a></li>
+                            <li><a href="{{ url_for('createsend') }}">Create SEND</a></li>
+                            <li><a href="{{ url_for('viewsend') }}">View SEND</a></li>
                         {% else %}
                             <li><a href="{{ url_for('register') }}">Register</a></li>    
                             <li><a href="{{ url_for('login') }}">Login</a></li>

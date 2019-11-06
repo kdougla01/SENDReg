@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+
+    
+
+    {% for result in results %}
+    <li>{{ result.send_title }}</li>
+    {% endfor %}
+
+{% endblock %}
